@@ -75,7 +75,7 @@ h2 {
   font-family: var(--heading);
   color: var(--text-h);
 }
-
+/* Regisztráció címsor */
 h1 {
   font-size: 450px;
   letter-spacing: 1px;
@@ -107,16 +107,16 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
-
+/* Űrlapunk label-jei */
 .form-label {
   color: rgb(52,64,84);
   font-weight: bold;
 }
-
+/* Segítség a kitöltéshez példák, az űrlapmezők placeholder-ei */
 input::placeholder {
   color: #98a2b3;
 }
-
+/* linkek formázása checkbox mellett */
 a:any-link {
   color: #1d2939;
   font-weight: normal;
@@ -128,11 +128,12 @@ a:visited {
   font-weight: bold;
   text-decoration: none;
 }
-
+/* Checkbox GDPR stb.. */
 input[type="checkbox"] {
   transform: scale(1.5);
 }
 
+/* Regisztráció gomb */
 .btn-primary {
    background-color: #465fff !important;
    padding-top: 1rem !important;
@@ -142,4 +143,10 @@ input[type="checkbox"] {
    font-weight: bold;
 }
 
-
+.text-left {
+  text-align: left;
+}
+/* Bejelentkezés link */
+#login {
+  color: #7588ff
+}

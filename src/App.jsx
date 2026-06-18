@@ -100,33 +100,34 @@ function App() {
                 />
               </div>
               <div className="mb-3 form-check d-block text-start">
-              
-                  <div className="mb-3 d-flex align-items-center">
-                    <input
-                      type="checkbox"
-                      className="form-check-input mt-0"
-                      id="check"
-                    />&nbsp;
-                    <label
-                      className="form-check-label ms-2 text-start"
-                      htmlFor="check"
-                      style={{ color: "#667085", fontSize: "1rem" }}
-                    >
-                      Fiók létrehozásával elfogadja a{" "}
-                      <a href="#">Felhasználási feltételeket,</a>
-                      <br />
-                      és az <a href="#">Adatvédelmi irányelveket</a>
-                    </label>
-                  </div>
+                <div className="mb-3 d-flex align-items-center">
+                  <input
+                    type="checkbox"
+                    className="form-check-input mt-0"
+                    id="check"
+                  />
+                  &nbsp;
+                  <label
+                    className="form-check-label ms-2 text-start"
+                    htmlFor="check"
+                    style={{ color: "#667085", fontSize: "1rem" }}
+                  >
+                    Fiók létrehozásával elfogadja a{" "}
+                    <a href="#">Felhasználási feltételeket,</a>
+                    <br />
+                    és az <a href="#">Adatvédelmi irányelveket</a>
+                  </label>
                 </div>
+              </div>
               <button type="submit" className="btn btn-primary h-15 w-100 mb-3">
                 Regisztráció
               </button>
             </form>
-
-            <p className="text-center">Már van fiókja?</p>
-            <a href="#">Bejelentkezés</a>
-
+            <div className="mb-3">
+              <p className="text-left">
+                Már van fiókja?&nbsp;<a id="login" href="#">Bejelentkezés</a>
+              </p>
+            </div>
             <div className="d-flex align-items-center my-3">
               <hr className="flex-grow-1" />
               <span className="px-2">Vagy</span>
@@ -143,7 +144,7 @@ function App() {
                 className="btn w-100"
                 style={{ backgroundColor: "#e0e0e0" }}
               >
-                X (Twitter) fiókkal
+                X fiókkal
               </button>
             </div>
           </div>
