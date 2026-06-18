@@ -1,6 +1,6 @@
 #!/bin/bash
 # Step 1: Create a new React project with Vite
-npm create vite@latest tempus-app -- --template react
+#npm create vite@latest tempus-app -- --template react
 
 # Step 2: Navigate to the project directory
 cd tempus-app
