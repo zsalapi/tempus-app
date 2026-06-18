@@ -9,27 +9,27 @@ function App() {
         {/* Bal oldal: Regisztráció */}
         <div className="col-md-6 d-flex align-items-center justify-content-center p-5">
           <div className="w-100" style={{ maxWidth: "80%" }}>
-            <h2>Regisztráció</h2>
+            <h1>Regisztráció</h1>
              <label className="text-center">Add meg e-mail címedet és jelszavadat a regisztrációhoz!</label>
             <div><br></br></div>
             <form>
               <div className="row">
                 <div className="col-md-6 mb-3">
-                  <label className="form-label d-block text-start">Vezetéknév</label>
-                  <input type="text" className="form-control" required />
+                  <label className="form-label d-block text-start">Vezetéknév <span style={{ color: 'red', fontSize: '0.8em', verticalAlign: 'super' }}>*</span></label>
+                  <input type="text" className="form-control" placeholder="Teszt" required />
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label className="form-label d-block text-start">Keresztnév</label>
-                  <input type="text" className="form-control" required />
+                  <label className="form-label d-block text-start">Keresztnév <span style={{ color: 'red', fontSize: '0.8em', verticalAlign: 'super' }}>*</span></label>
+                  <input type="text" className="form-control" placeholder="Elek" required />
                 </div>
               </div>
               <div className="mb-3">
-                <label className="form-label d-block text-start">Email cím</label>
-                <input type="email" className="form-control" required />
+                <label className="form-label d-block text-start">Email cím <span style={{ color: 'red', fontSize: '0.8em', verticalAlign: 'super' }}>*</span></label>
+                <input type="email" className="form-control" placeholder="example@mail.com" required />
               </div>
               <div className="mb-3">
-                <label className="form-label d-block text-start">Jelszó</label>
-                <input type="password" className="form-control" required />
+                <label className="form-label d-block text-start">Jelszó <span style={{ color: 'red', fontSize: '0.8em', verticalAlign: 'super' }}>*</span></label>
+                <input type="password" className="form-control" placeholder="************" required />
               </div>
               <div className="mb-3 form-check d-block text-start">
                 <input
