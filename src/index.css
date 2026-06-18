@@ -116,3 +116,30 @@ code {
 input::placeholder {
   color: #98a2b3;
 }
+
+a:any-link {
+  color: #1d2939;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1d2939;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+.btn-primary {
+   background-color: #465fff !important;
+   padding-top: 1rem !important;
+   padding-bottom: 1rem !important;
+   border-radius: 15%;
+   color: white;
+   font-weight: bold;
+}
+
+
