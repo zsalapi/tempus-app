@@ -7,12 +7,15 @@ import Tempus from "./assets/tempus-logo.svg"; //Tempus logó
 
 function App() {
   return (
-    <div className="container-fluid vh-100">
-      <div className="row h-100">
-        {/* Bal oldal: Regisztráció */}
-        <main className="col-md-6 d-flex align-items-center justify-content-center p-5">
-          <div className="w-100" style={{ maxWidth: "80%" }}>
-            <h1>Regisztráció</h1>
+    <div className="container-fluid min-vh-100">
+      <div className="row min-vh-100">
+        {/* Bal oldal: Regisztráció - mobilon teljes szélesség */}
+        <main className="col-12 col-md-6 d-flex align-items-center justify-content-center p-3 p-md-5">
+          <div className="w-100" style={{ maxWidth: "500px" }}>
+            {/* Reszponzív címsor: mobilon kisebb */}
+            <h1>
+              Regisztráció
+            </h1>
             {/* Az alcím kapott egy id-t, amivel a form mezők leírhatják magukat */}
             <p id="reg-desc">
               Add meg e-mail címedet és jelszavadat a regisztrációhoz!
@@ -30,7 +33,7 @@ function App() {
                       aria-hidden="true"
                       style={{
                         color: "red",
-                        fontSize: "0.8em",
+                        fontSize: "0.6em",
                         verticalAlign: "super",
                       }}
                     >
@@ -56,7 +59,7 @@ function App() {
                       aria-hidden="true"
                       style={{
                         color: "red",
-                        fontSize: "0.8em",
+                        fontSize: "0.6em",
                         verticalAlign: "super",
                       }}
                     >
@@ -83,7 +86,7 @@ function App() {
                     aria-hidden="true"
                     style={{
                       color: "red",
-                      fontSize: "0.8em",
+                      fontSize: "0.6em",
                       verticalAlign: "super",
                     }}
                   >
@@ -109,7 +112,7 @@ function App() {
                     aria-hidden="true"
                     style={{
                       color: "red",
-                      fontSize: "0.8em",
+                      fontSize: "0.6em",
                       verticalAlign: "super",
                     }}
                   >
@@ -136,17 +139,16 @@ function App() {
                   type="checkbox"
                   className="form-check-input mt-0"
                   id="check"
+                  style={{ marginRight: "1rem" }}
                 />
                 <label
                   className="form-check-label ms-2 text-start"
                   htmlFor="check"
                   style={{ color: "#667085", fontSize: "1rem" }}
                 >
-                  &nbsp;&nbsp; Fiók létrehozásával elfogadja a{" "}
-                  <a href="#">Felhasználási feltételeket,</a>
-                  <br />
-                  &nbsp;&nbsp;&nbsp;és az{" "}
-                  <a href="#">Adatvédelmi irányelveket</a>
+                  Fiók létrehozásával elfogadja a{" "}
+                  <a href="#">Felhasználási feltételeket,</a>{" "}
+                  és az <a href="#">Adatvédelmi irányelveket</a>
                 </label>
               </div>
 

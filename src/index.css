@@ -79,7 +79,7 @@ h2 {
 h1 {
   font-size: 450px;
   letter-spacing: 1px;
-  font-weight: 2000;
+  font-weight: 700;
   -webkit-text-stroke: 0.5px rgb(29, 41, 57); /* A szín legyen megegyező a szöveg színével */
   margin: 32px 0;
   color: rgb(29,41,57);
@@ -99,7 +99,7 @@ p {
   font-weight: bold;
 }
 /* placeholer, hr elválasztó színezése */
-input::placeholder, hr, .px-2 {
+input::placeholder, hr, .px-2 .form-check-label {
   color: #98a2b3;
 }
 /* linkek formázása checkbox mellett */
