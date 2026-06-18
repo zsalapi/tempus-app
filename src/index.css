@@ -132,6 +132,13 @@ input[type="checkbox"] {
 .text-left {
   text-align: left;
 }
+.kuldetes {
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 1.5rem;
+  color: #98a2b3;
+
+}
 /* Bejelentkezés link */
 #login {
   color: #7588ff;

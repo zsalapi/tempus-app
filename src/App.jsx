@@ -222,6 +222,7 @@ function App() {
               alt="Tempus logó"
               style={{ maxWidth: "33%", height: "auto" }}
             />
+            <p class="kuldetes">Közös küldetés</p>
           </div>
           <div className="flex-grow-1"></div>
         </div>
