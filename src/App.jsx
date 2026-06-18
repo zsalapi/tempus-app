@@ -1,6 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import grid from "./assets/grid.svg"; // Ügyelj rá, hogy a kép elérési útja helyes legyen
+import grid from "./assets/grid.svg"; // Grid háttér
+import google from './assets/web_neutral_sq_na.svg'; //Google logó
+import X from './assets/x.png'; //X logó (Twitter)
 
 function App() {
   return (
@@ -125,7 +127,10 @@ function App() {
             </form>
             <div className="mb-3">
               <p className="text-left">
-                Már van fiókja?&nbsp;<a id="login" href="#">Bejelentkezés</a>
+                Már van fiókja?&nbsp;
+                <a id="login" href="#" alt="Bejelentkezés már regisztrált felhasználóval">
+                  Bejelentkezés
+                </a>
               </p>
             </div>
             <div className="d-flex align-items-center my-3">
@@ -133,18 +138,20 @@ function App() {
               <span className="px-2">Vagy</span>
               <hr className="flex-grow-1" />
             </div>
-            <div>
+            <div className="d-flex space-between">
+             
+<button
+                className="btn w-100 mb-2"
+                style={{ backgroundColor: "#f2f4f7", marginRight: "30px" }}
+              >
+                
+               <img src={google} alt="Bejelentkezés Google fiókkal" />Google fiókkal
+              </button>  
               <button
                 className="btn w-100 mb-2"
-                style={{ backgroundColor: "#e0e0e0" }}
+                style={{ backgroundColor: "#f2f4f7" }}
               >
-                Google fiókkal
-              </button>
-              <button
-                className="btn w-100"
-                style={{ backgroundColor: "#e0e0e0" }}
-              >
-                X fiókkal
+                <img src={X} alt="Bejelentkezés X fiókkal" />&nbsp;&nbsp;X fiókkal
               </button>
             </div>
           </div>
