@@ -141,11 +141,12 @@ function App() {
                   className="form-check-label ms-2 text-start"
                   htmlFor="check"
                   style={{ color: "#667085", fontSize: "1rem" }}
-                >&nbsp;&nbsp;
-                  Fiók létrehozásával elfogadja a{" "}
+                >
+                  &nbsp;&nbsp; Fiók létrehozásával elfogadja a{" "}
                   <a href="#">Felhasználási feltételeket,</a>
                   <br />
-                  &nbsp;&nbsp;&nbsp;és az <a href="#">Adatvédelmi irányelveket</a>
+                  &nbsp;&nbsp;&nbsp;és az{" "}
+                  <a href="#">Adatvédelmi irányelveket</a>
                 </label>
               </div>
 
@@ -157,9 +158,11 @@ function App() {
             <div className="mb-3">
               <p class="text-left">
                 Már van fiókja?{" "}
-                <a id="login"
+                <a
+                  id="login"
                   href="/login"
-                  aria-label="Bejelentkezés meglévő fiókba">
+                  aria-label="Bejelentkezés meglévő fiókba"
+                >
                   Bejelentkezés
                 </a>
               </p>
@@ -206,6 +209,10 @@ function App() {
           style={{
             backgroundColor: "rgb(22, 25, 80)",
             backgroundImage: `url(${grid})`,
+            /* A 100% 100% érték hatására a kép széthúzódik a div teljes területén */
+            backgroundSize: "100% 100%",
+            /* Ezzel biztosítjuk, hogy ne ismétlődjön a kép */
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div className="flex-grow-1"></div>
