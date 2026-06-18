@@ -1,4 +1,8 @@
 Használt eszközök:
+
+Node.js amit használtam a React-hez a: v20.19.2
+React pedig:  "react": "^19.2.6", verzió
+
 Gemini, duckduckgo az AI beszélgetéseket ide rakom mind elég sok anyag a lényeget használtam belőle és sokszor nem pont úgy:
 
 Social gommbok innen:
