@@ -8,9 +8,10 @@ function App() {
       <div className="row h-100">
         {/* Bal oldal: Regisztráció */}
         <div className="col-md-6 d-flex align-items-center justify-content-center p-5">
-          <div className="w-100" style={{ maxWidth: "50%" }}>
+          <div className="w-100" style={{ maxWidth: "80%" }}>
             <h2>Regisztráció</h2>
              <label className="text-center">Add meg e-mail címedet és jelszavadat a regisztrációhoz!</label>
+            <div><br></br></div>
             <form>
               <div className="row">
                 <div className="col-md-6 mb-3">
@@ -23,7 +24,7 @@ function App() {
                 </div>
               </div>
               <div className="mb-3">
-                <label className="form-label d-block text-start">Emailcím</label>
+                <label className="form-label d-block text-start">Email cím</label>
                 <input type="email" className="form-control" required />
               </div>
               <div className="mb-3">
