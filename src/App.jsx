@@ -1,29 +1,33 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import grid from "./assets/grid.svg"; // Grid háttér
-import google from './assets/web_neutral_sq_na.svg'; //Google logó
-import X from './assets/x.png'; //X logó (Twitter)
+import google from "./assets/web_neutral_sq_na.svg"; //Google logó
+import X from "./assets/x.png"; //X logó (Twitter)
+import Tempus from "./assets/tempus-logo.svg"; //Tempus logó
 
 function App() {
   return (
     <div className="container-fluid vh-100">
       <div className="row h-100">
         {/* Bal oldal: Regisztráció */}
-        <div className="col-md-6 d-flex align-items-center justify-content-center p-5">
+        <main className="col-md-6 d-flex align-items-center justify-content-center p-5">
           <div className="w-100" style={{ maxWidth: "80%" }}>
             <h1>Regisztráció</h1>
-            <label className="text-center">
+            {/* Az alcím kapott egy id-t, amivel a form mezők leírhatják magukat */}
+            <p id="reg-desc">
               Add meg e-mail címedet és jelszavadat a regisztrációhoz!
-            </label>
-            <div>
-              <br></br>
-            </div>
+            </p>
+
             <form>
               <div className="row">
                 <div className="col-md-6 mb-3">
-                  <label className="form-label d-block text-start">
+                  <label
+                    htmlFor="vezeteknev"
+                    className="form-label d-block text-start"
+                  >
                     Vezetéknév{" "}
                     <span
+                      aria-hidden="true"
                       style={{
                         color: "red",
                         fontSize: "0.8em",
@@ -35,15 +39,21 @@ function App() {
                   </label>
                   <input
                     type="text"
+                    id="vezeteknev"
                     className="form-control"
                     placeholder="Teszt"
                     required
+                    aria-required="true"
                   />
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label className="form-label d-block text-start">
+                  <label
+                    htmlFor="keresztnev"
+                    className="form-label d-block text-start"
+                  >
                     Keresztnév{" "}
                     <span
+                      aria-hidden="true"
                       style={{
                         color: "red",
                         fontSize: "0.8em",
@@ -55,16 +65,22 @@ function App() {
                   </label>
                   <input
                     type="text"
+                    id="keresztnev"
                     className="form-control"
                     placeholder="Elek"
                     required
+                    aria-required="true"
                   />
                 </div>
               </div>
               <div className="mb-3">
-                <label className="form-label d-block text-start">
+                <label
+                  htmlFor="email"
+                  className="form-label d-block text-start"
+                >
                   Email cím{" "}
                   <span
+                    aria-hidden="true"
                     style={{
                       color: "red",
                       fontSize: "0.8em",
@@ -76,15 +92,21 @@ function App() {
                 </label>
                 <input
                   type="email"
+                  id="email"
                   className="form-control"
                   placeholder="example@mail.com"
                   required
+                  aria-required="true"
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label d-block text-start">
+                <label
+                  htmlFor="jelszo"
+                  className="form-label d-block text-start"
+                >
                   Jelszó{" "}
                   <span
+                    aria-hidden="true"
                     style={{
                       color: "red",
                       fontSize: "0.8em",
@@ -94,86 +116,107 @@ function App() {
                     *
                   </span>
                 </label>
+                {/* aria-describedby segíti a képernyőolvasót a jelszó követelmények megértésében */}
                 <input
                   type="password"
+                  id="jelszo"
                   className="form-control"
                   placeholder="************"
+                  aria-describedby="pwd-help"
                   required
+                  aria-required="true"
                 />
+                <small id="pwd-help" className="visually-hidden">
+                  Legalább 10 karakter, kis és nagybetű és szám is legyen benne.
+                </small>
               </div>
-              <div className="mb-3 form-check d-block text-start">
-                <div className="mb-3 d-flex align-items-center">
-                  <input
-                    type="checkbox"
-                    className="form-check-input mt-0"
-                    id="check"
-                  />
-                  &nbsp;
-                  <label
-                    className="form-check-label ms-2 text-start"
-                    htmlFor="check"
-                    style={{ color: "#667085", fontSize: "1rem" }}
-                  >
-                    Fiók létrehozásával elfogadja a{" "}
-                    <a href="#">Felhasználási feltételeket,</a>
-                    <br />
-                    és az <a href="#">Adatvédelmi irányelveket</a>
-                  </label>
-                </div>
+
+              <div className="mb-3 d-flex align-items-center">
+                <input
+                  type="checkbox"
+                  className="form-check-input mt-0"
+                  id="check"
+                />
+                <label
+                  className="form-check-label ms-2 text-start"
+                  htmlFor="check"
+                  style={{ color: "#667085", fontSize: "1rem" }}
+                >
+                  Fiók létrehozásával elfogadja a{" "}
+                  <a href="#">Felhasználási feltételeket,</a>
+                  <br />
+                  és az <a href="#">Adatvédelmi irányelveket</a>
+                </label>
               </div>
-              <button type="submit" className="btn btn-primary h-15 w-100 mb-3">
+
+              <button type="submit" className="btn btn-primary w-100 mb-3">
                 Regisztráció
               </button>
             </form>
+
             <div className="mb-3">
-              <p className="text-left">
-                Már van fiókja?&nbsp;
-                <a id="login" href="#" alt="Bejelentkezés már regisztrált felhasználóval">
+              <p>
+                Már van fiókja?{" "}
+                <a
+                  href="/login"
+                  aria-label="Bejelentkezés meglévő fiókba"
+                  style={{ color: "#0d6efd", textDecoration: "underline" }}
+                >
                   Bejelentkezés
                 </a>
               </p>
             </div>
+
             <div className="d-flex align-items-center my-3">
               <hr className="flex-grow-1" />
               <span className="px-2">Vagy</span>
               <hr className="flex-grow-1" />
             </div>
-            <div className="d-flex space-between">
-             
-<button
-                className="btn w-100 mb-2"
-                style={{ backgroundColor: "#f2f4f7", marginRight: "30px" }}
+
+            <div className="d-flex">
+              <button
+                className="btn w-100 mb-2 me-3"
+                style={{ backgroundColor: "#f2f4f7" }}
               >
-                
-               <img src={google} alt="Bejelentkezés Google fiókkal" />Google fiókkal
-              </button>  
+                <img
+                  src={google}
+                  alt="Bejelentkezés Google fiókkal"
+                  aria-hidden="true"
+                  style={{ width: "20px", marginRight: "8px" }}
+                />
+                Google fiókkal
+              </button>
               <button
                 className="btn w-100 mb-2"
                 style={{ backgroundColor: "#f2f4f7" }}
               >
-                <img src={X} alt="Bejelentkezés X fiókkal" />&nbsp;&nbsp;X fiókkal
+                <img
+                  src={X}
+                  alt="Bejelentkezés X fiókkal"
+                  aria-hidden="true"
+                  style={{ width: "20px", marginRight: "8px" }}
+                />
+                X fiókkal
               </button>
             </div>
           </div>
-        </div>
+        </main>
 
         {/* Jobb oldal: Grid háttér */}
         <div
           className="col-md-6 d-flex flex-column"
-          style={{ backgroundColor: "rgb(22, 25, 80)" }}
+          style={{
+            backgroundColor: "rgb(22, 25, 80)",
+            backgroundImage: `url(${grid})`,
+          }}
         >
           <div className="flex-grow-1"></div>
-          <div
-            className="d-flex align-items-center justify-content-center"
-            style={{
-              height: "300px",
-              backgroundImage: `url(${grid})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            {/* Középső elem a jobb oldalon */}
+          <div className="d-flex flex-column align-items-center justify-content-center">
+            <img
+              src={Tempus}
+              alt="Tempus logó"
+              style={{ maxWidth: "80%", height: "auto" }}
+            />
           </div>
           <div className="flex-grow-1"></div>
         </div>
