@@ -3,7 +3,7 @@
 #npm create vite@latest tempus-app -- --template react
 
 # Step 2: Navigate to the project directory
-cd tempus-app
+#cd tempus-app
 
 # Step 3: Install dependencies
 npm install
