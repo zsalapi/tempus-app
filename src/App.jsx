@@ -182,7 +182,7 @@ function App() {
                   src={google}
                   alt="Bejelentkezés Google fiókkal"
                   aria-hidden="true"
-                  style={{ width: "20px", marginRight: "8px" }}
+                  style={{ width: "50px", marginRight: "8px" }}
                 />
                 Google fiókkal
               </button>
@@ -194,7 +194,7 @@ function App() {
                   src={X}
                   alt="Bejelentkezés X fiókkal"
                   aria-hidden="true"
-                  style={{ width: "20px", marginRight: "8px" }}
+                  style={{ width: "30px", marginRight: "8px" }}
                 />
                 X fiókkal
               </button>
@@ -215,7 +215,7 @@ function App() {
             <img
               src={Tempus}
               alt="Tempus logó"
-              style={{ maxWidth: "80%", height: "auto" }}
+              style={{ maxWidth: "33%", height: "auto" }}
             />
           </div>
           <div className="flex-grow-1"></div>
