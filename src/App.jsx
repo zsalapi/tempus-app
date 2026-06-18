@@ -141,11 +141,11 @@ function App() {
                   className="form-check-label ms-2 text-start"
                   htmlFor="check"
                   style={{ color: "#667085", fontSize: "1rem" }}
-                >
+                >&nbsp;&nbsp;
                   Fiók létrehozásával elfogadja a{" "}
                   <a href="#">Felhasználási feltételeket,</a>
                   <br />
-                  és az <a href="#">Adatvédelmi irányelveket</a>
+                  &nbsp;&nbsp;&nbsp;és az <a href="#">Adatvédelmi irányelveket</a>
                 </label>
               </div>
 
@@ -155,13 +155,11 @@ function App() {
             </form>
 
             <div className="mb-3">
-              <p>
+              <p class="text-left">
                 Már van fiókja?{" "}
-                <a
+                <a id="login"
                   href="/login"
-                  aria-label="Bejelentkezés meglévő fiókba"
-                  style={{ color: "#0d6efd", textDecoration: "underline" }}
-                >
+                  aria-label="Bejelentkezés meglévő fiókba">
                   Bejelentkezés
                 </a>
               </p>

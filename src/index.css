@@ -134,6 +134,7 @@ input[type="checkbox"] {
 }
 /* Bejelentkezés link */
 #login {
-  color: #7588ff
+  color: #7588ff;
+  text-decoration: "underline";
 }
 
